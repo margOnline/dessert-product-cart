@@ -1,0 +1,79 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --red: hsl(14, 86%, 42%);
+  --green: hsl(159, 69%, 38%);
+
+  --rose-50: hsl(20, 50%, 98%);
+  --rose-100: hsl(13, 31%, 94%);
+  --rose-300: hsl(14, 25%, 72%);
+  --rose-400: hsl(7, 20%, 60%);
+  --rose-500: hsl(12, 20%, 44%);
+  --rose-900: hsl(14, 65%, 9%);
+
+  --white: #fff;
+
+  --font-size-base: 1rem;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--rose-50);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--rose-50);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+[role='list'] {
+  list-style: none;
+}
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: var(--font-size-base);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h3,
+h4 {
+  font-weight: 700;
+}
+button {
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
