@@ -1,17 +1,14 @@
 <script setup>
-import { convertImgFilename } from '@/utils/assets'
 
 const props = defineProps({
   lineItem: Object,
 })
-
-console.log('props:', props.lineItem)
 </script>
 
 <template>
   <div class="order-item-container">
     <div class="order-item-details">
-      <img :src="convertImgFilename(props.lineItem.image.thumbnail)" alt="" />
+      <img :src="props.lineItem.image.thumbnail" alt="" />
       <div class="order-text">
         <h4>{{ props.lineItem.name }}</h4>
         <p>

@@ -6,11 +6,6 @@ import removeFromCartIcon from '../assets/images/icon-remove-item.svg'
 import carbonNeutralIcon from '../assets/images/icon-carbon-neutral.svg'
 import orderConfirmedIcon from '../assets/images/icon-order-confirmed.svg'
 
-export const convertImgFilename = (filename) => {
-  return new URL(filename, import.meta.url).href
-}
-
-
 export const icons = {
   addToCart: addToCartIcon,
   emptyCart: emptyCartIcon,

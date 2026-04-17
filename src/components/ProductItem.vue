@@ -1,5 +1,4 @@
 <script setup>
-import { convertImgFilename } from '@/utils/assets'
 import ProductButton from './ProductButton.vue'
 import { state, findCartProduct } from '@/utils/state'
 
@@ -17,7 +16,7 @@ function handleAddToCart() {
 
 <template>
   <div class="product-container" :class="toggleSelected()">
-    <img :src="convertImgFilename(props.product.image.mobile)" :alt="product.name" />
+    <img :src="props.product.image.mobile" :alt="product.name" />
     <div class="product-btn">
       <ProductButton @add-to-cart="handleAddToCart" :product="props.product" />
     </div>
