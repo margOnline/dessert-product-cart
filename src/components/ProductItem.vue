@@ -15,8 +15,8 @@ function handleAddToCart() {
 </script>
 
 <template>
-  <div class="product-container" :class="toggleSelected()">
-    <img :src="props.product.image.mobile" :alt="product.name" />
+  <div class="product-container">
+    <img :class="toggleSelected()" :src="props.product.image.mobile" :alt="product.name" />
     <div class="product-btn">
       <ProductButton @add-to-cart="handleAddToCart" :product="props.product" />
     </div>
@@ -48,7 +48,7 @@ img {
   font-weight: 400;
 }
 .selected {
-  border: 1px solid var(--red);
+  border: 2px solid var(--red);
   border-radius: 1rem;
 }
 </style>
