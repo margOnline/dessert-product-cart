@@ -41,11 +41,11 @@ function updateCart() {
     Add to cart
   </button>
   <div v-else class="btn-quantity-amender">
-    <button class="amender">
+    <button class="btn btn-reverse increment">
       <img :src="icons['decrement']" alt="decrement" @click="decrementQuantity()" />
     </button>
     <div>{{ productQuantity() }}</div>
-    <button class="amender">
+    <button class="btn btn-reverse decrement">
       <img :src="icons['increment']" alt="increment" @click="incrementQuantity()" />
     </button>
   </div>
@@ -59,6 +59,10 @@ function updateCart() {
   background-color: var(--white);
   border: 1px solid var(--red);
 }
+.btn-reverse {
+  background-color: var(--red);
+  border: 1px solid var(--white);
+}
 .btn:hover {
   color: var(--red);
 }
@@ -69,13 +73,8 @@ function updateCart() {
   background-color: var(--red);
   border-radius: 2rem;
   color: var(--white);
-  .amender {
-    background-color: var(--red);
-    border: 1px solid var(--red);
-  }
-  .amender:hover {
-    cursor: pointer;
-    border: 1 px solid var(--white);
-  }
+}
+button.amender:hover {
+  cursor: pointer;
 }
 </style>

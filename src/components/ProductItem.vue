@@ -37,7 +37,8 @@ img {
   justify-content: space-evenly;
 }
 .product-btn {
-  margin-block-start: -1rem;
+  margin-block: -1rem;
+
   align-self: center;
 }
 .product-category {
