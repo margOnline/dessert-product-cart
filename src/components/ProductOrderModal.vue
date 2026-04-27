@@ -36,9 +36,6 @@ function resetState() {
 </template>
 
 <style scoped>
-/* .hide {
-  display: none;
-} */
 button {
   width: 100%;
 }
@@ -76,5 +73,18 @@ ul {
 }
 .btn-full-width {
   width: 100%;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% black */
+  backdrop-filter: blur(3px); /* Optional: blurs background */
+  z-index: 100; /* Must be below the modal */
+}
+.hidden {
+  display: none !important;
 }
 </style>
