@@ -24,12 +24,12 @@ const removeItemFromCart = () => {
     <div class="cart-item-price-container">
       <div class="cart-item-cost">
         <p class="item-total">
-          <span class="quantity">{{ cartLineQty() }}x</span>
+          <span class="product-qty">{{ cartLineQty() }}x</span>
           <span>@ ${{ props.product.price }}</span>
           <span class="total">${{ cartLineAmt() }}</span>
         </p>
       </div>
-      <button class="remove" @click="removeItemFromCart()">
+      <button class="remove" @click="removeItemFromCart()" :disabled="state.orderConfirmed">
         <img :src="icons['removeFromCart']" alt="remove" />
       </button>
     </div>
@@ -56,7 +56,7 @@ const removeItemFromCart = () => {
 }
 .item-total {
   color: var(--rose-400);
-  .quantity {
+  .product-qty {
     color: var(--red);
     font-weight: 700;
     margin-inline-end: 1rem;
@@ -77,5 +77,6 @@ const removeItemFromCart = () => {
 }
 .remove:hover {
   cursor: pointer;
+  border: 2px solid var(--rose-900);
 }
 </style>

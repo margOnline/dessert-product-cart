@@ -36,19 +36,19 @@ function updateCart() {
 }
 </script>
 <template>
-  <button v-if="!inCart()" class="btn" @click="emit('addToCart')">
+  <button v-if="!inCart()" class="btn" @click="emit('addToCart')" :disabled="state.orderConfirmed">
     <img :src="icons['addToCart']" alt="add to cart" />
     Add to cart
   </button>
-  <div v-else class="btn-quantity-amender">
-    <button class="btn btn-reverse increment">
+  <button v-else class="btn-quantity-amender" :disabled="state.orderConfirmed">
+    <span class="btn btn-reverse increment">
       <img :src="icons['decrement']" alt="decrement" @click="decrementQuantity()" />
-    </button>
+    </span>
     <div>{{ productQuantity() }}</div>
-    <button class="btn btn-reverse decrement">
+    <span class="btn btn-reverse decrement">
       <img :src="icons['increment']" alt="increment" @click="incrementQuantity()" />
-    </button>
-  </div>
+    </span>
+  </button>
 </template>
 
 <style scoped>
@@ -68,13 +68,27 @@ function updateCart() {
 }
 .btn-quantity-amender {
   display: flex;
+  padding: 0.125rem 0.825rem;
   gap: 0.5rem;
   align-items: center;
   background-color: var(--red);
   border-radius: 2rem;
+  border: none;
   color: var(--white);
 }
 button.amender:hover {
   cursor: pointer;
 }
+.increment,
+.decrement {
+  border: 1px solid var(--red);
+}
+.increment img,
+.decrement img {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--white);
+  border-radius: 2rem;
+}
+
 </style>

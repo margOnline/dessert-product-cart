@@ -13,7 +13,8 @@ import { computeCartTotal } from '@/utils/state'
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block-start: 2rem;
+  padding-block: 1rem;
+  margin: 2rem;
   span {
     font-weight: 700;
     font-size: 1.75rem;

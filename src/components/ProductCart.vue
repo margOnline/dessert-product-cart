@@ -33,7 +33,7 @@ function confirmOrder() {
         <img :src="icons['carbonNeutral']" alt="green tree" />
         <p>This is a <span>carbon-neutral </span>delivery</p>
       </div>
-      <button @click="confirmOrder()">Confirm Order</button>
+      <button @click="confirmOrder()" :disabled="state.orderConfirmed">Confirm Order</button>
     </div>
   </div>
 </template>
@@ -70,8 +70,8 @@ button {
 }
 button:hover {
   cursor: pointer;
-  background-color: var(--rose-500);
-  border: 1px solid var(--rose-500);
+  background-color: var(--red-dark);
+  border: 1px solid var(--red-dark);
 }
 .carbon-neutral {
   display: flex;
