@@ -87,4 +87,14 @@ ul {
 .hidden {
   display: none !important;
 }
+
+@media (min-width: 48rem) {
+  .modal-container {
+    width: 80%;
+    top: 25%;
+    left: 10%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
 </style>

@@ -21,28 +21,21 @@ const props = defineProps({
 
 <style scoped>
 .order-item-container {
-  padding: 2rem;
+  padding: 2rem 1rem;
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 4fr 1fr;
+  gap: 1rem;
+  grid-template-columns: 1fr 6fr 1fr;
+  img {
+    max-width: 75px;
+  }
   .product-item-total {
     justify-self: end;
     align-self: center;
   }
 }
 .order-item-details {
-  /* display: grid;
- 
-  /* align-items: center; */
   border-bottom: 1px solid var(--rose-100);
   margin-block-start: 1rem;
-  /* padding: 1rem;
-  color: var(--rose-900);
-  .order-item-text {
-    margin-inline-start: 1rem;
-    display: flex;
-    flex-direction: column;
-  } */
   .product-qty {
     color: var(--red);
     font-weight: 700;

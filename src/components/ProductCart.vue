@@ -3,6 +3,7 @@ import { icons } from '@/utils/assets'
 import { state } from '@/utils/state'
 import ProductCartItem from './ProductCartItem.vue'
 import OrderTotal from './OrderTotal.vue'
+import ProductCartMessage from './ProductCartMessage.vue'
 
 function cartIsEmpty() {
   return state.value.cartQty === 0
@@ -29,10 +30,7 @@ function confirmOrder() {
         :product="product"
       />
       <OrderTotal />
-      <div class="carbon-neutral">
-        <img :src="icons['carbonNeutral']" alt="green tree" />
-        <p>This is a <span>carbon-neutral </span>delivery</p>
-      </div>
+      <ProductCartMessage />
       <button @click="confirmOrder()" :disabled="state.orderConfirmed">Confirm Order</button>
     </div>
   </div>
@@ -72,16 +70,5 @@ button:hover {
   cursor: pointer;
   background-color: var(--red-dark);
   border: 1px solid var(--red-dark);
-}
-.carbon-neutral {
-  display: flex;
-  justify-content: space-around;
-  margin-block: 1.5rem;
-  padding: 1rem 2rem;
-  background-color: var(--color-background);
-  border-radius: 1rem;
-  span {
-    font-weight: 700;
-  }
 }
 </style>
