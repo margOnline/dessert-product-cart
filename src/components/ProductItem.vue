@@ -16,7 +16,18 @@ function handleAddToCart() {
 
 <template>
   <div class="product-container">
-    <img :class="toggleSelected()" :src="props.product.image.mobile" :alt="product.name" />
+    <img
+      class="img-mobile"
+      :class="toggleSelected()"
+      :src="props.product.image.mobile"
+      :alt="product.name"
+    />
+    <img
+      class="img-desktop"
+      :class="toggleSelected()"
+      :src="props.product.image.desktop"
+      :alt="product.name"
+    />
     <div class="product-btn">
       <ProductButton @add-to-cart="handleAddToCart" :product="props.product" />
     </div>
@@ -32,13 +43,17 @@ img {
   border-radius: 1rem;
 }
 .product-container {
+  max-width: 1020px;
+  margin-block-start: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  h2 {
+    line-height: 1.725rem;
+  }
 }
 .product-btn {
-  margin-block: -1rem;
-
+  margin-block-start: -1.5rem;
   align-self: center;
 }
 .product-category {
@@ -51,5 +66,23 @@ img {
 .selected {
   border: 2px solid var(--red);
   border-radius: 1rem;
+}
+.img-desktop {
+  display: none;
+}
+@media (min-width: 46rem) {
+  .img-desktop {
+    display: inline-block;
+  }
+  .img-mobile {
+    display: none;
+  }
+  .product-container h2 {
+    font-size: 1rem;
+  }
+  .product-category,
+  .product-price {
+    font-size: 0.825rem;
+  }
 }
 </style>

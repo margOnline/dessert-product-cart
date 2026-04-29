@@ -1,6 +1,6 @@
 <script setup>
 import { computeCartQty, findCartProduct, removeCartProduct, state } from '@/utils/state'
-import { icons } from '@/utils/assets'
+
 const props = defineProps({
   product: Object,
 })
@@ -25,12 +25,23 @@ const removeItemFromCart = () => {
       <div class="cart-item-cost">
         <p class="item-total">
           <span class="product-qty">{{ cartLineQty() }}x</span>
-          <span>@ ${{ props.product.price }}</span>
+          <span>@ ${{ props.product.price.toFixed(2) }}</span>
           <span class="total">${{ cartLineAmt() }}</span>
         </p>
       </div>
       <button class="remove" @click="removeItemFromCart()" :disabled="state.orderConfirmed">
-        <img :src="icons['removeFromCart']" alt="remove" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="10"
+          height="10"
+          fill="none"
+          viewBox="0 0 10 10"
+        >
+          <path
+            fill="#CAAFA7"
+            d="M8.375 9.375 5 6 1.625 9.375l-1-1L4 5 .625 1.625l1-1L5 4 8.375.625l1 1L6 5l3.375 3.375-1 1Z"
+          />
+        </svg>
       </button>
     </div>
   </div>
@@ -78,5 +89,8 @@ const removeItemFromCart = () => {
 .remove:hover {
   cursor: pointer;
   border: 2px solid var(--rose-900);
+}
+.remove svg:hover path {
+  fill: hsl(14, 65%, 9%);
 }
 </style>

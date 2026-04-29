@@ -7,7 +7,7 @@
 
 :root {
   --red: hsl(14, 86%, 42%);
-  --red-dark: hsl(10, 83%, 30%);
+  --red-dark: #8c220d;
   --green: hsl(159, 69%, 38%);
 
   --rose-50: hsl(20, 50%, 98%);
@@ -42,13 +42,15 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background-color: var(--color-background);
-
   line-height: 1.6;
   font-family: var(--sans-serif);
   font-size: var(--font-size-base);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  max-width: 980px;
+}
+img {
+  width: 100%;
 }
 h2,
 h3,

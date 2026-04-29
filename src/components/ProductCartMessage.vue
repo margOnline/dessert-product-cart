@@ -21,5 +21,8 @@ import { icons } from '@/utils/assets'
   span {
     font-weight: 700;
   }
+  img {
+    width: 1rem;
+  }
 }
 </style>

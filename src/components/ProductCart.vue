@@ -24,9 +24,9 @@ function confirmOrder() {
 
     <div v-else>
       <ProductCartItem
-        v-for="(product, idx) in state.cartProducts"
+        v-for="(product, index) in state.cartProducts"
         class="cart-item-container"
-        :key="idx"
+        :key="index"
         :product="product"
       />
       <OrderTotal />
@@ -52,6 +52,7 @@ h3 {
   display: grid;
   img {
     justify-self: center;
+    width: 50%;
   }
   p {
     font-size: 0.75rem;

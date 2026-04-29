@@ -38,11 +38,12 @@ function resetState() {
 <style scoped>
 button {
   width: 100%;
+  background-color: var(--red);
+  color: var(--white);
+  border: 1px solid var(--red);
 }
 p {
   color: var(--rose-500);
-}
-ul {
 }
 .modal-container {
   width: 100%;
@@ -55,6 +56,9 @@ ul {
   padding: 1rem;
   border-radius: 1rem;
   z-index: 100;
+  img {
+    width: 3rem;
+  }
 }
 .product-order-container {
   background-color: var(--rose-50);
@@ -63,9 +67,7 @@ ul {
   border-radius: 1rem;
 }
 .btn-reverse {
-  background-color: var(--red);
-  color: var(--white);
-  border: 1px solid var(--red);
+  
 }
 .btn-reverse:hover {
   background-color: var(--red-dark);
@@ -88,7 +90,7 @@ ul {
   display: none !important;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 46rem) {
   .modal-container {
     width: 80%;
     top: 25%;
