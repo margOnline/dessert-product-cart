@@ -21,12 +21,13 @@ const props = defineProps({
 
 <style scoped>
 .order-item-container {
-  padding: 2rem 1rem;
+  padding: 0.5rem 1rem;
+  align-items: center;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 6fr 1fr;
   img {
-    max-width: 75px;
+    width: 3rem;
   }
   .product-item-total {
     justify-self: end;
@@ -34,15 +35,15 @@ const props = defineProps({
   }
 }
 .order-item-details {
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid var(--rose-100);
-  margin-block-start: 1rem;
   .product-qty {
     color: var(--red);
     font-weight: 700;
     margin-inline-end: 1rem;
   }
   .product-price {
-    margin-block-start: 1rem;
     color: var(--rose-500);
   }
 }

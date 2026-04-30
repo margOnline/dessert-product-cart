@@ -18,7 +18,7 @@ function resetState() {
 <template>
   <div :class="state.orderConfirmed ? 'overlay' : 'hidden'">
     <div class="modal-container">
-      <img :src="icons['orderConfirmed']" alt="checkmark" />
+      <img :src="icons['orderConfirmed']" alt="order confirmed" />
       <h2>Order Confirmed</h2>
       <p>We hope you enjoy your food!</p>
       <div class="product-order-container">
@@ -66,9 +66,6 @@ p {
   padding: 0;
   border-radius: 1rem;
 }
-.btn-reverse {
-  
-}
 .btn-reverse:hover {
   background-color: var(--red-dark);
   border: 1px solid var(--red-dark);
@@ -93,7 +90,7 @@ p {
 @media (min-width: 46rem) {
   .modal-container {
     width: 80%;
-    top: 25%;
+    top: 3rem;
     left: 10%;
     -webkit-transform: translateX(0);
     transform: translateX(0);

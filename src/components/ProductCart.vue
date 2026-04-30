@@ -52,7 +52,7 @@ h3 {
   display: grid;
   img {
     justify-self: center;
-    width: 50%;
+    width: 30%;
   }
   p {
     font-size: 0.75rem;
@@ -71,5 +71,15 @@ button:hover {
   cursor: pointer;
   background-color: var(--red-dark);
   border: 1px solid var(--red-dark);
+}
+@media (min-width: 46rem) {
+  .img-container img {
+    width: 25%;
+  }
+}
+@media (min-width: 61rem) {
+  .cart-container {
+    margin-block: 0;
+  }
 }
 </style>

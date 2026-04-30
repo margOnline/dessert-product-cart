@@ -8,10 +8,13 @@ import { state } from './utils/state'
 
 <template>
   <main>
-    <h1>Desserts</h1>
-    <ProductOrderModal v-if="state.orderConfirmed" />
-    <div class="products-container">
-      <ProductItem v-for="(product, idx) in products" :key="idx" :product="product"> </ProductItem>
+    <div class="content-container">
+      <h1>Desserts</h1>
+      <ProductOrderModal v-if="state.orderConfirmed" />
+      <div class="products-container">
+        <ProductItem v-for="(product, idx) in products" :key="idx" :product="product">
+        </ProductItem>
+      </div>
     </div>
     <ProductCart />
   </main>
@@ -26,6 +29,14 @@ import { state } from './utils/state'
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+  }
+}
+@media (min-width: 61rem) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-block-start: 1rem;
   }
 }
 </style>
