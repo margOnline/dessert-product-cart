@@ -18,7 +18,23 @@ function resetState() {
 <template>
   <div :class="state.orderConfirmed ? 'overlay' : 'hidden'">
     <div class="modal-container">
-      <img :src="icons['orderConfirmed']" alt="order confirmed" />
+      <div class="modal-actions">
+        <img :src="icons['orderConfirmed']" alt="order confirmed" />
+        <div class="close-modal" @click="resetState()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 10 10"
+          >
+            <path
+              fill="#CAAFA7"
+              d="M8.375 9.375 5 6 1.625 9.375l-1-1L4 5 .625 1.625l1-1L5 4 8.375.625l1 1L6 5l3.375 3.375-1 1Z"
+            />
+          </svg>
+        </div>
+      </div>
       <h2>Order Confirmed</h2>
       <p>We hope you enjoy your food!</p>
       <div class="product-order-container">
@@ -59,6 +75,16 @@ p {
   img {
     width: 3rem;
   }
+}
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.close-modal:hover {
+  cursor: pointer;
+}
+.close-modal svg:hover path {
+  fill: hsl(14, 65%, 9%);
 }
 .product-order-container {
   background-color: var(--rose-50);
