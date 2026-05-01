@@ -15,7 +15,7 @@ function inCart() {
   return findCartProduct(props.product.name)
 }
 function productQuantity() {
-  return inCart().qty
+  return inCart()?.qty
 }
 function incrementQuantity() {
   const cartProduct = findCartProduct(props.product.name)

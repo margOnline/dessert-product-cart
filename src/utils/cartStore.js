@@ -26,7 +26,7 @@ export const removeCartProduct = (productName) => {
   state.value.cartQty = computeCartQty()
 }
 function isCartEmpty() {
-  state.value.cartProducts.length === 0
+  return state.value.cartProducts.length === 0
 }
 function cartProducts() {
   return state.value.cartProducts
