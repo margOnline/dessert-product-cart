@@ -71,3 +71,16 @@ button {
 button:disabled {
   cursor: not-allowed;
 }
+#app {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+@media (min-width: 64rem) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+}
