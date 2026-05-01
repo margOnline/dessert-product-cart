@@ -14,7 +14,6 @@ import { computeCartTotal } from '@/utils/state'
   justify-content: space-between;
   align-items: center;
   padding-block: 1rem;
-  /* margin-inline: 1rem; */
   span {
     font-weight: 700;
     font-size: 1.75rem;

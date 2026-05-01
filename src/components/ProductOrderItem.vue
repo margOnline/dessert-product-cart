@@ -21,7 +21,7 @@ const props = defineProps({
 
 <style scoped>
 .order-item-container {
-  padding: 0.5rem 1rem;
+  padding-block: 1rem;
   align-items: center;
   display: grid;
   gap: 1rem;

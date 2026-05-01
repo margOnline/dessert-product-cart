@@ -63,7 +63,7 @@ p {
 .product-order-container {
   background-color: var(--rose-50);
   margin-block: 1.5rem;
-  padding: 0;
+  padding-inline: 1rem;
   border-radius: 1rem;
 }
 .btn-reverse:hover {
