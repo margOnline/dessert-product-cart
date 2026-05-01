@@ -3,10 +3,8 @@ import { icons } from '@/utils/assets'
 import { state } from '@/utils/cartStore'
 import ProductOrderItem from './ProductOrderItem.vue'
 import OrderTotal from './OrderTotal.vue'
+import { toCamelCase } from '@/utils/helpers'
 
-// function isOrderConfirmed() {
-//   return !state.value.orderConfirmed
-// }
 function resetState() {
   state.value.cartProducts = []
   state.value.cartQty = 0
@@ -39,7 +37,7 @@ function resetState() {
       <p>We hope you enjoy your food!</p>
       <div class="product-order-container">
         <ul role="list">
-          <li v-for="(lineItem) in state.cartProducts" :key="toCamelCase(lineItem.name)">
+          <li v-for="lineItem in state.cartProducts" :key="toCamelCase(lineItem.name)">
             <ProductOrderItem :lineItem="lineItem" />
           </li>
         </ul>
