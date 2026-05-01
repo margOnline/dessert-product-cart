@@ -38,8 +38,8 @@ function resetState() {
       <h2>Order Confirmed</h2>
       <p>We hope you enjoy your food!</p>
       <div class="product-order-container">
-        <ul>
-          <li role="list" v-for="(lineItem, idx) in state.cartProducts" :key="idx">
+        <ul role="list">
+          <li v-for="(lineItem) in state.cartProducts" :key="toCamelCase(lineItem.name)">
             <ProductOrderItem :lineItem="lineItem" />
           </li>
         </ul>

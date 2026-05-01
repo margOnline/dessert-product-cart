@@ -17,7 +17,7 @@ export const computeCartTotal = () => {
   return total.toFixed(2)
 }
 export const findCartProduct = (productName) => {
-  return cartProducts().find((product) => product.name == productName)
+  return cartProducts().find((product) => product.name === productName)
 }
 export const removeCartProduct = (productName) => {
   const filteredCart = cartProducts().filter((product) => product.name !== productName)

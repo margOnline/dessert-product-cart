@@ -4,6 +4,7 @@ import { state } from '@/utils/cartStore'
 import ProductCartItem from './ProductCartItem.vue'
 import OrderTotal from './OrderTotal.vue'
 import ProductCartMessage from './ProductCartMessage.vue'
+import { toCamelCase } from '@/utils/helpers'
 
 function cartIsEmpty() {
   return state.value.cartQty === 0
@@ -24,9 +25,9 @@ function confirmOrder() {
 
     <div v-else>
       <ProductCartItem
-        v-for="(product, index) in state.cartProducts"
+        v-for="product in state.cartProducts"
         class="cart-item-container"
-        :key="index"
+        :key="toCamelCase(product.name)"
         :product="product"
       />
       <OrderTotal />
