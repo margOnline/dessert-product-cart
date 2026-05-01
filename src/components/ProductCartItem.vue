@@ -1,5 +1,5 @@
 <script setup>
-import { computeCartQty, findCartProduct, removeCartProduct, state } from '@/utils/state'
+import { computeCartQty, findCartProduct, removeCartProduct, state } from '@/utils/cartStore'
 
 const props = defineProps({
   product: Object,

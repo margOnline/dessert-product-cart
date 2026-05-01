@@ -1,6 +1,6 @@
 <script setup>
 import { icons } from '@/utils/assets'
-import { state } from '@/utils/state'
+import { state } from '@/utils/cartStore'
 import ProductCartItem from './ProductCartItem.vue'
 import OrderTotal from './OrderTotal.vue'
 import ProductCartMessage from './ProductCartMessage.vue'

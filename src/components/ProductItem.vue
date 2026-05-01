@@ -1,6 +1,6 @@
 <script setup>
 import ProductButton from './ProductButton.vue'
-import { state, findCartProduct } from '@/utils/state'
+import { state, findCartProduct } from '@/utils/cartStore'
 
 const props = defineProps({
   product: Object,

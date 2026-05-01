@@ -3,7 +3,7 @@ import products from './data.json'
 import ProductItem from './components/ProductItem.vue'
 import ProductCart from './components/ProductCart.vue'
 import ProductOrderModal from './components/ProductOrderModal.vue'
-import { state } from './utils/state'
+import { state } from './utils/cartStore'
 </script>
 
 <template>

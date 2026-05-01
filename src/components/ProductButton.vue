@@ -6,7 +6,7 @@ import {
   computeCartTotal,
   removeCartProduct,
   state,
-} from '@/utils/state'
+} from '@/utils/cartStore'
 
 const props = defineProps({ product: Object })
 const emit = defineEmits(['addToCart'])

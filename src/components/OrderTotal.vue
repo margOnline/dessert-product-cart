@@ -1,5 +1,5 @@
 <script setup>
-import { computeCartTotal } from '@/utils/state'
+import { computeCartTotal } from '@/utils/cartStore'
 </script>
 
 <template>
